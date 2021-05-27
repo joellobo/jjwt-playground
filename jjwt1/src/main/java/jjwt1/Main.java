@@ -20,10 +20,10 @@ public class Main {
 	public static void main(String[] args) {
 		decode();
 		encode();
-		encode2();
+		validar();
 	}
 
-	private static void encode() {
+	private static void validar() {
 		String header = get("header");
 		String payload = get("payload");
 		String signature = get("signature");
@@ -41,7 +41,7 @@ public class Main {
 		System.out.println("Valid:" + valid);
 	}
 
-	private static void encode2() {
+	private static void encode() {
 		Key key = MacProvider.generateKey();
 
 		System.out.println("Key:" + key);
